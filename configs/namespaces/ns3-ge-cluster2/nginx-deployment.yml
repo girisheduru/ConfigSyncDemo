@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    run: nginx-cluster2
-  name: nginx-cluster2
+    run: nginx-ns3
+  name: nginx-ns3
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: nginx-cluster2
+      run: nginx-ns3
   template:
     metadata:
       labels:
-        run: nginx-cluster2
+        run: nginx-ns3
     spec:
       containers:
       - image: nginx

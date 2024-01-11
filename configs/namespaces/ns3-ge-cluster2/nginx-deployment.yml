@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: nginx-cluster2
+  name: nginx-cluster2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: nginx-cluster2
+  template:
+    metadata:
+      labels:
+        run: nginx-cluster2
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 80

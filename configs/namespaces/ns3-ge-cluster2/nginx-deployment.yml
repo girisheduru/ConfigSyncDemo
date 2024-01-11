@@ -1,9 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    configmanagement.gke.io/cluster-selector: cluster2
   labels:
     run: nginx-ns3
   name: nginx-ns3
+  namespace: ns3-gke2
 spec:
   replicas: 1
   selector:

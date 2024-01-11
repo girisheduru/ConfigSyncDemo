@@ -4,3 +4,4 @@ metadata:
   name: ns3-gke2
   annotations:
     # configmanagement.gke.io/cluster-selector: ge-cluster-2
+    configsync.gke.io/cluster-name-selector: cluster2

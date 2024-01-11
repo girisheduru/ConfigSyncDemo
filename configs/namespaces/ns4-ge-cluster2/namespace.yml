@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: ns4-gke2
   annotations:
-    configmanagement.gke.io/cluster-selector: ge-cluster-2
+    # configmanagement.gke.io/cluster-selector: ge-cluster-2

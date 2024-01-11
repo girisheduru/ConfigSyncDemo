@@ -1,21 +1,24 @@
-# apiVersion: apps/v1
-# kind: Deployment
-# metadata:
-#   labels:
-#     run: nginx-ns1
-#   name: nginx-ns1
-# spec:
-#   replicas: 1
-#   selector:
-#     matchLabels:
-#       run: nginx-ns1
-#   template:
-#     metadata:
-#       labels:
-#         run: nginx-ns1
-#     spec:
-#       containers:
-#       - image: nginx
-#         name: nginx
-#         ports:
-#         - containerPort: 80
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    configmanagement.gke.io/cluster-selector: cluster1
+  labels:
+    run: nginx-ns1
+  name: nginx-ns1
+  namespace: ns1-gke1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: nginx-ns1
+  template:
+    metadata:
+      labels:
+        run: nginx-ns1
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 80

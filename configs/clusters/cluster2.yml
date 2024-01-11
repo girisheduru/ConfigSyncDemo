@@ -1,0 +1,6 @@
+Kind: Cluster
+apiVersion: clusterregistry.k8s.io/v1alpha1
+metadata:
+  name: ge-cluster-2
+  labels:
+    environment: cluster2

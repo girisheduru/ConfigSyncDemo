@@ -1,8 +1,8 @@
-kind: ClusterSelector
-apiVersion: configmanagement.gke.io/v1
-metadata:
-  name: cluster1
-spec:
-  selector:
-    matchLabels:
-      clustername: cluster1
+# kind: ClusterSelector
+# apiVersion: configmanagement.gke.io/v1
+# metadata:
+#   name: cluster1
+# spec:
+#   selector:
+#     matchLabels:
+#       clustername: cluster1

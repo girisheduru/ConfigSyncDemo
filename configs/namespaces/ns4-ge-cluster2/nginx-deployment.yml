@@ -1,22 +1,22 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
-    run: nginx-ns4
-  name: nginx-ns4
-  namespace: ns4-gke2
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      run: nginx-ns4
-  template:
-    metadata:
-      labels:
-        run: nginx-ns4
-    spec:
-      containers:
-      - image: nginx
-        name: nginx
-        ports:
-        - containerPort: 80
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   labels:
+#     run: nginx-ns4
+#   name: nginx-ns4
+#   namespace: ns4-gke2
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       run: nginx-ns4
+#   template:
+#     metadata:
+#       labels:
+#         run: nginx-ns4
+#     spec:
+#       containers:
+#       - image: nginx
+#         name: nginx
+#         ports:
+#         - containerPort: 80
